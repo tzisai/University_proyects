@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Tit pestaña</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Estilo.css"/>
+    </head>
+    <body>
+        <h1 class="T1">Título de la página</h1>
+        <ul id="lista"></ul>
+        <script>
+        function cargarXML() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "XMLDocumento.xml", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let xmlDoc = xhr.responseXML;
+                    let personas = xmlDoc.getElementsByTagName("persona");
+
+                    let lista = document.getElementById("lista");
+                    for (let i = 0; i < personas.length; i++) {
+                        let nombre = personas[i].getElementsByTagName("nombre")[0].textContent;
+                        let edad = personas[i].getElementsByTagName("edad")[0].textContent;
+                        
+                        let li = document.createElement("li");
+                        li.textContent = `Nombre: ${nombre}, Edad: ${edad}`;
+                        lista.appendChild(li);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        window.onload = cargarXML;
+    </script>
+    </body>
+</html>

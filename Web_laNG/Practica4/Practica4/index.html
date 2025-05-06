@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+Autores:
+    Martin Isai Nuñez Villeda
+    Paola Montserrat Osorio García
+
+Universidad Autonoma de Aguascalientes
+Ingenieria en computación inteligente
+Lenguajes IV
+
+Practica: Funciones en JavaScript
+-->
+
+<html>
+    <head>
+        <title>Funciones en JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS1.css">
+    </head>
+    <body  onload="init();">
+        <div><center><b>MiAplicacionFun</b></center></div>
+        <center>
+            <ul>
+                <li>Martin Isai Nuñez Villeda</li>
+                <li>Paola Montserrat Osorio García</li>
+            </ul>
+        </center>
+        <form>
+            <fieldset>
+                <legend>Botones para las funciones</legend>
+                <table>
+                    <tr>
+                        <td><label for="Funcion_nombre">Nombre:</label></td>
+                        <td><input type="text" id="name" name="name" size="70"></td>
+                        <td><input type="button" id="name_b" name="name_b" value="Nombre"></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="Dolar_Peso">En dólares:</label></td>
+                        <td><input type="text" id="dolar" name="dolar"></td>
+                        <td><input type="button" id="dolar_b" name="dolar_b" value="Dólar"></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="BMI">IMC:</label></td>
+                        <td><input type="text" id="imc" name="imc"></td>
+                        <td><input type="button" id="imc_b" name="imc_b" value="IMC"></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="cad_tam">Tamaño de cadena:</label></td>
+                        <td><input type="text" id="tam" name="tam"></td>
+                        <td><input type="button" id="tam_b" name="tam_b" value="Tamaño"></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="cad_conc">Cadena concatenada:</label></td>
+                        <td><input type="text" id="conc" name="conc"></td>
+                        <td><input type="button" id="conc_b" name="conc_b" value="Concatenar"></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="cad_convertir">Cadena convertida:</label></td>
+                        <td><input type="text" id="conv" name="conv"></td>
+                        <td><input type="button" id="conv_b" name="conv_b" value="Convertir"></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="cad_split">Split cadena:</label></td>
+                        <td><input type="text" id="split" name="split" size="40"></td>
+                        <td><input type="button" id="split_b" name="split_b" value="Split"></td>
+                    </tr>
+        
+                    <tr>
+                        <td colspan="3" align="center">
+                            <input type="button" id="limpiar" name="limpiar" value="Limpiar">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        
+        <script src="funcionalidad.js"></script>
+    </body>
+</html>

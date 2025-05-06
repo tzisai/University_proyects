@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<personas>
+    
+    <persona>
+        <nombre>Juan Pérez</nombre>
+        <edad>30</edad>
+    </persona>
+    
+    <persona>
+        <nombre>María López</nombre>
+        <edad>25</edad>
+    </persona>
+    
+    <persona>
+        <nombre>Martin</nombre>
+        <edad>15</edad>
+    </persona>
+    
+</personas>
+
