@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega8515"</DEVICE>
+ <WORKING_DIR>C:\Users\Isai Nuñez\Documents\4to_semestre\University_proyects\Assembly\ATMEGA8515_05_19\ATMEGA8515_05_19\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Isai Nuñez\Documents\4to_semestre\University_proyects\Assembly\ATMEGA8515_05_19\ATMEGA8515_05_19\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Isai Nuñez\Documents\4to_semestre\University_proyects\Assembly\ATMEGA8515_05_19\ATMEGA8515_05_19\Debug\ATMEGA8515_05_19.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ATMEGA8515_05_19.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ATMEGA8515_05_19.map</FILE>
+  <FILE>ATMEGA8515_05_19.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <CICLOTE><FILE>C:\Users\Isai Nuñez\Documents\4to_semestre\University_proyects\Assembly\ATMEGA8515_05_19\ATMEGA8515_05_19\main.asm</FILE><LINE>22</LINE></CICLOTE>
+  <RETARDO><FILE>C:\Users\Isai Nuñez\Documents\4to_semestre\University_proyects\Assembly\ATMEGA8515_05_19\ATMEGA8515_05_19\main.asm</FILE><LINE>68</LINE></RETARDO>
+  <L_RETRASO><FILE>C:\Users\Isai Nuñez\Documents\4to_semestre\University_proyects\Assembly\ATMEGA8515_05_19\ATMEGA8515_05_19\main.asm</FILE><LINE>72</LINE></L_RETRASO>
+ </LABELS>
+</ASSEMBLER_INFO>
