@@ -1,0 +1,474 @@
+﻿/*Integrantes: Martin Isai Nuñez Villeda y Maria Fernanda Mata Araiza
+Objetivo: Crear un menu que te de las siguientes opciones:
+Ejercicio 1: Crear un programa que pida el nombre y edad de una persona y te diga si es menor o mayor de edad 
+Ejercicio 2: Crear un programa que te pida el lado de un cuadrado y te imprima el perimetro y el area 
+Ejercicio 3: Crear un programa que pida la estatura de 5 personas y te diga cuantas son mas altas y cuantas son
+mas bajas de la estatura promedio
+Ejercicio 4: Realizar un programa que te permita guardar los nombres y salarios de 5 trabajadores y te indique
+quien tiene el sueldo mayor
+Ejercicio 5: Crear un programa que guarde 3 cuentas de bancos, permita hacer depositos y retiros y al final del
+dia indique cuanto dinero tiene cada cliente y la cantidad total de dinero que hay depositado
+Ejercicio 6: Crear un programa que tenga una clase padre que pida el nombre y la edad de una persona, y una clase
+hija que herede el nombre y la edad de la clase padre y en la clase hija pida el salario, e imprima el nombre y
+la edad y el salario */
+using Ejercicios_Repaso_MFMA_MINV;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        bool Mkey = true;
+        int chosse, X=0;
+        menu menusote;
+        menusote = new menu();
+        while (Mkey == true)
+        {
+            chosse = menusote.menuD(); //Asigna la opcion del menu a la variable 'choose'
+            switch (chosse)
+            {
+                case 1:
+                    {
+                        Console.Clear();
+                        X = 0;
+                        Console.SetCursorPosition(10, X);
+                        Console.WriteLine("Mayor o menor de edad");
+                        string? nombre; //Asignamos variables
+                        int edad = 0;
+                        Persona_mayor_menor persona1 = new Persona_mayor_menor(); //Crea un objeta de la clase
+                        X = X + 1;
+                        Console.SetCursorPosition(10, X);
+                        Console.WriteLine("Ingresa el nombre de la persona: ");
+                        X = X + 1;
+                        Console.SetCursorPosition(10, X);
+                        nombre = Console.ReadLine();
+                        while (!nombre.All(char.IsLetter) || string.IsNullOrEmpty(nombre)) //Valida que en el string unicamente existan letras
+                        {
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Error");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Ingresa el nombre de la persona: ");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            nombre = Console.ReadLine();
+                        }
+                        X = X + 1;
+                        Console.SetCursorPosition(10, X);
+                        Console.WriteLine("Ingresa la edad de la persona: ");
+                        X = X + 1;
+                        Console.SetCursorPosition(10, X);
+                        while (!int.TryParse(Console.ReadLine(), out edad) || edad <= 0) //Valida la edad
+                        {
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Error");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Ingresa la edad de la persona: ");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                        }
+                        persona1.Set_Persona(nombre, edad); //Asigna los atributos a la clase
+                        Console.Clear();
+                        Console.WriteLine("El nombre de la persona es " + persona1.Get_nombre()); 
+                        Console.WriteLine("Y su edad es " + persona1.Get_edad()); //Imprime los valores
+                        persona1.mayor_menor(); //Llama a la funcion para verificar si es mayor o menor de edad
+                        Console.ReadKey();
+                        break;
+                    }
+                case 2:
+                    {
+                        int input = 0;
+                        int valid = 0;
+                        int key = 0;
+                        while (key == 0)
+                        {
+
+
+                            do
+                            {
+                                try
+                                {
+                                    Console.Clear(); //Sub menu para indicar que desea hacer el usuario
+                                    Console.SetCursorPosition(10, 0);  
+                                    Console.WriteLine(" Bievenido");
+                                    Console.SetCursorPosition(10, 1);
+                                    Console.WriteLine("Que desea calcular? (tipe el numero oportunamente)");
+                                    Console.SetCursorPosition(10, 2);
+                                    Console.WriteLine("Perimetro(1)");
+                                    Console.SetCursorPosition(10, 3);
+                                    Console.WriteLine("Área(2)");
+                                    Console.SetCursorPosition(10, 4);
+                                    Console.WriteLine("Ambos(3)");
+                                    Console.SetCursorPosition(10, 5);
+                                    Console.WriteLine("Salir(4)");
+                                    Console.SetCursorPosition(10, 6);
+                                    input = Convert.ToInt32(Console.ReadLine());
+                                    if (input > 0 && input < 5) //Verifica el valor
+                                    {
+                                        valid = 0;
+                                    }
+                                }
+                                catch (Exception)
+                                {
+                                    Console.WriteLine("Input invalido intentelo nuevamente con los numeros indicados");
+                                    Console.ReadKey();
+                                    valid = 1;
+                                }
+
+                            }
+                            while (valid == 1);
+
+
+                            switch (input)
+                            {
+                                case 1:
+                                    {
+                                        Console.Clear();
+                                        int lado = 0;
+                                        cuadrado cua1 = new cuadrado(lado); //Crea un objeto de la clase
+                                        lado = cua1.validacion(); //Pide el valor del lado
+                                        cua1.setLado(lado); 
+                                        cua1.perimetro(lado); //Calcula el perimetro
+                                        Console.ReadKey();
+                                        break;
+                                    }
+
+                                case 2:
+                                    {
+                                        Console.Clear();
+                                        int lado = 0;
+                                        cuadrado cua2 = new cuadrado(lado); //Crea un objeto de la clase
+                                        lado = cua2.validacion(); //Pide el valor del lado
+                                        cua2.setLado(lado); 
+                                        cua2.area(lado); //Calcula el area
+                                        Console.ReadKey();
+                                        break;
+                                    }
+
+                                case 3:
+                                    {
+                                        Console.Clear();
+                                        int lado = 0;
+                                        cuadrado cua3 = new cuadrado(lado); //Crea un objeto de la clase
+                                        lado = cua3.validacion(); //Pide el valor del lado
+                                        cua3.setLado(lado); 
+                                        cua3.area(lado); //Calcula el area
+                                        Console.ReadKey();
+                                        Console.Clear();
+                                        cua3.perimetro(lado); //Calcula el perimetro
+                                        Console.ReadKey();
+                                        break;
+                                    }
+                                case 4:
+                                    {
+                                        key = 1;
+                                        break;
+                                    }
+                            }
+
+
+                        }
+                        break;
+                    }
+
+                case 3:
+                    {
+                        Console.Clear();
+                        X = 0;
+                        Console.SetCursorPosition(10, X);
+                        Console.WriteLine("Estatura Promedio");
+                        float[] estatura = new float[5];
+                        int i = 0, mayor = 0, menor = 0, igual = 0;
+                        float promedio = 0;
+                        for (i = 0; i < 5; i++)
+                        {
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Ingresa la estatura de la persona #" + (i + 1) + (":  "));
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            while (!float.TryParse(Console.ReadLine(), out estatura[i]) || estatura[i] <= 0) //Valida la entrada
+                            {
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("ERROR");
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("Ingresa la estatura de la persona #" + (i + 1) + (":  "));
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                            }
+                            promedio = promedio + estatura[i];
+                        }
+                        promedio = promedio / 5; //Calcula el promedio de estaturas
+                        Console.Clear();
+                        Console.WriteLine("La estatura promedio es de " + promedio);
+                        for (i = 0; i < 5; i++)
+                        {
+                            if (estatura[i] > promedio)
+                            {
+                                mayor++; //Si la estatura es mayor suma 1 a la variable
+                            }
+                            if (estatura[i] < promedio)
+                            {
+                                menor++; //Si la estatura es menor suma 1 a la variable
+                            }
+                            if (estatura[i] == promedio)
+                            {
+                                igual++; //Si la estatura es igual suma 1 a la variable
+                            }
+                        }
+                        Console.WriteLine("Hay " + mayor + " personas que son mas altas que la estatura promedio");
+                        Console.WriteLine("Hay " + menor + " personas que son mas bajas que la altura promedio");
+                        Console.WriteLine("Hay " + igual + " personas que miden lo mismo que la altura promedio"); //Imprime resultados
+                        Console.ReadKey();
+                        break;
+                    }
+
+                case 4:
+                    {
+                        Console.Clear();
+                        trabajadores t1;
+                        t1 = new trabajadores(); //Crea un objeto de la clase
+                        t1.mothEmployed(); //Llama a la clase
+
+                        break;
+                    }
+
+                case 5:
+                    {
+                        X = 0;
+                        Console.Clear();
+                        X = X + 1;
+                        Console.SetCursorPosition(10, X);
+                        Console.WriteLine("Banco");
+                        float[] clientes = new float[3]; string[] nom_clientes = new string[3]; //Asigna variables
+                        int i = 0, opcion = 0, num_cuenta = 0;
+                        float cant_depositar, cant_retirar, total_dinero = 0, total_balance = 0;
+                        for (i = 0; i < 3; i++) //Pide el nombre y el dinero de las 3 cuentas 
+                        {
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Ingresa el propietario de la cuenta #" + (i + 1) + ": ");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            nom_clientes[i] = Console.ReadLine();
+                            while (!nom_clientes[i].All(char.IsLetter) || string.IsNullOrEmpty(nom_clientes[i])) //Verfica variable
+                            {
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("ERROR");
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("Ingresa el propietario de la cuenta #" + (i + 1) + ": ");
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                nom_clientes[i] = Console.ReadLine();
+                            }
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("Ingresa el dinero inicial de la cuenta #" + (i + 1) + ":  ");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            while (!float.TryParse(Console.ReadLine(), out clientes[i])) //Verfica variable
+                            {
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("ERROR");
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("Ingresa el dinero inicial de la cuenta #" + (i + 1) + ":  ");
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                            }
+                        }
+                        do //Imprime el menu de opciones 
+                        {
+                            Console.Clear();
+                            X = 0;
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("---MENU---");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("1.Depositos");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("2.Retiros");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("3.Verificar cuentas");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            Console.WriteLine("4.Final del dia");
+                            X = X + 1;
+                            Console.SetCursorPosition(10, X);
+                            while (!int.TryParse(Console.ReadLine(), out opcion)) //Verfica variable
+                            {
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("ERROR");
+                                X = X + 1;
+                                Console.SetCursorPosition(10, X);
+                                Console.WriteLine("Intente de nuevo");
+                            }
+                            switch (opcion)
+                            {
+                                case 1:
+                                    Console.Clear();
+                                    Console.WriteLine("Depositos");
+                                    Console.WriteLine("Ingrese el numero de cuenta a la que desea depositar: "); //Pide el numero de cuenta al que deseas acceder
+                                    while (!int.TryParse(Console.ReadLine(), out num_cuenta) || num_cuenta < 0 || num_cuenta > 4) //Verfica variable
+                                    {
+                                        Console.WriteLine("Ingrese un numero de cuenta valido");
+                                        Console.WriteLine("Ingrese el numero de cuenta a la que desea depositar: ");
+                                    }
+                                    num_cuenta = num_cuenta - 1;
+                                    Console.WriteLine(nom_clientes[num_cuenta]); //Imprime la cuenta a la que se ingreso
+                                    Console.WriteLine(clientes[num_cuenta]);
+                                    Console.WriteLine("Ingrese la cantidad que desea depositar: "); //Pide cantidad de dinero que se desea ingresar
+                                    while (!float.TryParse(Console.ReadLine(), out cant_depositar) || cant_depositar <= 0) //Verfica variable
+                                    {
+                                        Console.WriteLine("ERROR");
+                                        Console.WriteLine("Ingrese la cantidad que desea depositar: ");
+                                    }
+                                    clientes[num_cuenta] = clientes[num_cuenta] + cant_depositar; //Suma el dinero
+                                    Console.WriteLine("Cuenta actualizada"); 
+                                    Console.WriteLine(nom_clientes[num_cuenta]); //Imprime la cuenta actualizada
+                                    Console.WriteLine(clientes[num_cuenta]);
+                                    Console.ReadKey();
+                                    break;
+                                case 2:
+                                    Console.Clear();
+                                    Console.WriteLine("Retiros");
+                                    Console.WriteLine("Ingrese el numero de cuenta a la que desea retirar: "); //Pide el numero de cuenta al que deseas acceder
+                                    while (!int.TryParse(Console.ReadLine(), out num_cuenta) || num_cuenta < 0 || num_cuenta > 4) //Verifica variable
+                                    {
+                                        Console.WriteLine("Ingrese un numero de cuenta valido");
+                                        Console.WriteLine("Ingrese el numero de cuenta a la que desea depositar: ");
+                                    }
+                                    num_cuenta = num_cuenta - 1;
+                                    Console.WriteLine(nom_clientes[num_cuenta]); //Imprime la cuenta a la que se ingreso
+                                    Console.WriteLine(clientes[num_cuenta]);
+                                    if (clientes[num_cuenta] <= 0) //Verifica que la cuenta no tenga un saldo negativo o que no tenga dinero en la cuenta
+                                    {
+                                        Console.WriteLine("No se puede retirar dinero de esta cuenta");
+                                        Console.ReadKey();
+                                        break;
+                                    }
+
+                                    Console.WriteLine("Ingrese la cantidad que desea retirar: "); //Pide la cantidad que se desea retirar
+                                    while (!float.TryParse(Console.ReadLine(), out cant_retirar) || cant_retirar <= 0) //Verifica variable
+                                    {
+                                        Console.WriteLine("ERROR");
+                                        Console.WriteLine("Ingrese la cantidad que desea retirar: ");
+                                    }
+                                    while (cant_retirar > clientes[num_cuenta]) //verifica que el dinero que se desea retirar no sea mayor al dinero que hay en la cuenta
+                                    {
+                                        Console.WriteLine("No puedes retirar una cantidad mayor a la que tienes en la cuenta, intente de nuevo");
+                                        Console.WriteLine("Ingrese la cantidad que desea retirar: ");
+                                        while (!float.TryParse(Console.ReadLine(), out cant_retirar) || cant_retirar <= 0) //verifica variables
+                                        {
+                                            Console.WriteLine("ERROR");
+                                            Console.WriteLine("Ingrese la cantidad que desea retirar: ");
+                                        }
+                                    }
+                                    clientes[num_cuenta] = clientes[num_cuenta] - cant_retirar; //Resta el dinero de la cuenta
+                                    Console.WriteLine("Cuenta actualizada");
+                                    Console.WriteLine(nom_clientes[num_cuenta]); //Imprime la cuenta actualizada
+                                    Console.WriteLine(clientes[num_cuenta]);
+                                    Console.ReadKey();
+                                    break;
+                                case 3:
+                                    Console.Clear();
+                                    Console.WriteLine("Verificar cuentas"); 
+                                    for (i = 0; i < 3; i++) //Imprime todas las cuentas con nombre y saldo
+                                    {
+                                        Console.WriteLine("Cuenta #" + (i + 1));
+                                        Console.WriteLine(nom_clientes[i]);
+                                        Console.WriteLine(clientes[i]);
+                                        Console.WriteLine("----------------------------------------");
+                                    }
+                                    Console.ReadKey();
+                                    break;
+                                case 4:
+                                    Console.Clear();
+                                    Console.WriteLine("Final del dia");
+                                    for (i = 0; i < 3; i++) //Imprime todas las cuentas con nombre y saldo
+                                    {
+                                        Console.WriteLine("Cuenta #" + (i + 1));
+                                        Console.WriteLine(nom_clientes[i]);
+                                        Console.WriteLine(clientes[i]);
+                                        Console.WriteLine("----------------------------------------");
+                                        total_balance += clientes[i]; //Suma los saldos de las cuentas para el balance total del banco
+                                        if (clientes[i] >= 0) //Verifica que la cuenta no tenga un saldo negativo o en ceros
+                                        {
+                                            total_dinero += clientes[i]; //Suma el dinero que hay depositado en el banco
+                                        }
+                                    }
+                                    Console.WriteLine("La cantidad total de dinero depositado es: " + total_dinero);
+                                    Console.WriteLine("El balance total del banco es: " + total_balance); //Imprime las variables
+                                    Console.ReadKey();
+                                    break;
+                                default:
+                                    Console.WriteLine("ERROR");
+                                    Console.WriteLine("Ingrese una opcion valida");
+                                    Console.ReadKey();
+                                    break;
+                            }
+                        } while (opcion != 4); //No sale a menos que en el menu la opcion sea salir
+
+                        break;
+                    }
+
+                case 6:
+                    {
+                        Console.Clear();
+                        string nom = string.Empty;
+                        string salarioS = string.Empty;
+                        string edadS = string.Empty; //Declaramos string con empty para que no marque error
+
+                        int edad = 0;
+                        int salario = 0; //Declaramos variables
+
+                        Console.WriteLine("Ingresa el nombre del familiar de el empleado");
+                        nom = Console.ReadLine(); //Pide nombre de la clase padre
+                        Console.WriteLine("Ingresa la edad del familiar de el empleado");
+                        edadS = Console.ReadLine(); //Pide edad de la clase padre
+                        edad = Convert.ToInt32(edadS);
+                        Persona per1;
+                        per1 = new Persona(nom, edad); //Crea objeto de la clase y manda variables
+
+                        Console.WriteLine("Ingresa el nombre del empleado");
+                        nom = Console.ReadLine(); //Pide nombre de la clase hija
+                        Console.WriteLine("Ingresa la edad del empleado");
+                        edadS = Console.ReadLine(); //Pide edad de la clase hija
+                        edad = Convert.ToInt32(edadS);
+                        Console.WriteLine("Ingresa el salario de le empleado");
+                        salarioS = Console.ReadLine(); //Pide el salario
+                        salario = Convert.ToInt16(salarioS); 
+
+                        empleado emp1 = new empleado(nom, edad, salario); //Crea el objeto de la clase hija y manda variables
+
+                        per1.imprimirDatos(); //Imprime datos de la clase padre
+                        emp1.mostrarDatosEmpleado(); //Imprime datos de la clase hija
+                        Console.ReadKey();
+                        break;
+                    }
+
+                case 7:
+                    {
+                        Mkey = false;
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("No deberías estar aqui como lograste esto¿?"); //En teoria nadie deberia de poder llegar hasta aqui
+                        break;
+                    }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\bin\Debug\CalcuNomina.exe.config
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\bin\Debug\CalcuNomina.exe
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\bin\Debug\CalcuNomina.pdb
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\bin\Debug\Guna.UI.dll
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.AssemblyReference.cache
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.Form1.resources
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.Properties.Resources.resources
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.GenerateResource.cache
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.CoreCompileInputs.cache
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.CopyComplete
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.exe
+C:\Users\raisa\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.pdb
+C:\Users\Alan\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.AssemblyReference.cache
+C:\Users\Alan\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.exe
+C:\Users\Alan\source\repos\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.pdb
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\bin\Debug\CalcuNomina.exe.config
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\bin\Debug\CalcuNomina.exe
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\bin\Debug\CalcuNomina.pdb
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.AssemblyReference.cache
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.Form1.resources
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.Properties.Resources.resources
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.GenerateResource.cache
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.CoreCompileInputs.cache
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.csproj.CopyComplete
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.exe
+C:\Users\raisa\Documents\trabajps 2do semestre\Lenguajs de comp II\P3\CalcuNomina\CalcuNomina\CalcuNomina\obj\Debug\CalcuNomina.pdb

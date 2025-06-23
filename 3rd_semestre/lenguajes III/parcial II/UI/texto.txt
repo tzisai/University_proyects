@@ -1,0 +1,5 @@
+Jose,sanchez,lopez,28,2,1986     
+Maria,lLópez,ramirez,8,4,1988
+lucia,Martínez,lopez,2,3,1987
+mara,Basurto,salas,13,12,1980
+luis,hidalgo,lara,16,4,1990

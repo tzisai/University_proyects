@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alan\\source\\repos\\ArbolBinario\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2168D2C6-8BD1-4B43-A34C-CA0B2A437DFD}|ArbolBinario\\ArbolBinario.vcxproj|C:\\Users\\Alan\\source\\repos\\ArbolBinario\\ArbolBinario\\ArbolBinario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2168D2C6-8BD1-4B43-A34C-CA0B2A437DFD}|ArbolBinario\\ArbolBinario.vcxproj|solutionrelative:ArbolBinario\\ArbolBinario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ArbolBinario.cpp",
+              "DocumentMoniker": "C:\\Users\\Alan\\source\\repos\\ArbolBinario\\ArbolBinario\\ArbolBinario.cpp",
+              "RelativeDocumentMoniker": "ArbolBinario\\ArbolBinario.cpp",
+              "ToolTip": "C:\\Users\\Alan\\source\\repos\\ArbolBinario\\ArbolBinario\\ArbolBinario.cpp",
+              "RelativeToolTip": "ArbolBinario\\ArbolBinario.cpp",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAADwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-10T14:55:27.287Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

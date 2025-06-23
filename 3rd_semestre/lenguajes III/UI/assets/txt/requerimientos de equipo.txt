@@ -1,0 +1,52 @@
+
+UI	(programa general/primer pantalla) menu principal
+
+		 nuevo grafo UI+Backend+modeling
+			(funcionalidades)
+				crear nodo 				Backend+modeling
+				conectar nodos				Backend+modeling
+				etiquetado de grafos(label)		Backend+UI
+								
+				creación de arcos			Backend+modeling
+				conexión de arcos de nodos hacia otros	Backend+modeling
+				capacidad de almacenar un valor numérico(peso de arco)	Backend+UI
+
+				recorrido de menor entre dos nodos seleccionados(de manera preferente también mostrar si el grafo es 					dirigido el recorrido ponderado)	Backend+modeling+UI
+				
+				guardar grafo (opcional (sugerencia)) Backend+UI
+
+		cargar grafo(opcional{sugerencia para que se vea mamador})[este apartado manda al mismo entorno que nuevo grafo pero con 					un grafo instanciado(guardado con anterioridad)		Backend
+
+		salir<- incluido en menu principal
+
+Notas: Nodos con contorno de color, textura y además el entorno debe de ser 3d y los nodos deben de ser de forma esférica.
+
+El programa se puede dividir en:
+
+	UI de menu
+	implementación de menu
+
+	UI de sección de grafo(entorno de interacción grafo usuario en caso de agregar extras[add-on's])
+
+	Implementación de funcionalidades de Nodos
+	Implementación de funcionalidades de Arcos
+
+	Cargar grafo/guardar grafo
+
+Notas de division:
+básicamente se resume en esto los que están de manera consecutiva son secciones paralelas; Cabe aclarar que todo este proyecto es modular es decir que todas las secciones dependen de la otra para funcionar.
+
+como recomendación, sugeriría trabajar de manera modular por implementación para tener asi un menor control de debugging,un main mas limpio entendible y mas fácil de manejar.
+
+casi en todas las secciones se necesita de UI interacción con backend y saber del modelo 3d de la implemtacion asi que sera muy difícil si se crea un equipo de solo back o front ya que debería urgar demasiados códigos que tendrán una implementación deferente.
+
+sugerencia!!
+	en medida de lo posible seguir una misma metodología de código (identacion,comentarios,acomodo,variables intuitivas)
+	y en la medida de lo posible de usar chat-gpt explicar el código y avisar de su uso.
+
+Notas para el equipo:
+	De manera encarecida se pide de no poder se suficiente con su parte del proyecto tener la comunicación pertinente, de igual manera se avisa de antemano que este es un trabajo en equipo y no se tomara muy bien el caso de no hacer nada o que alguien se haga todo el proyecto sin previo aviso.
+Se espera un entorno de equipo, responsable sano y acorde a nuestro nivel académico y formación profesional.
+
+Atte 
+Martin Y Paola.

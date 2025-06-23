@@ -1,0 +1,16 @@
+// See https://aka.ms/new-console-template for more information
+//Martin Isai Nuñez Villeda 
+//Objetivo:crea un codigo que si se ingresa la palabra correcta "hola" tome como valida la contraseña en otro caso pedirla nuevamente.
+
+string pwrd;
+
+do {
+    Console.Clear();
+    Console.WriteLine("Ingresa la contraseña");
+    pwrd = Console.ReadLine();
+} while (pwrd!="hola");
+
+if (pwrd == "hola")
+{
+    Console.WriteLine("Contraseña Valida");
+}

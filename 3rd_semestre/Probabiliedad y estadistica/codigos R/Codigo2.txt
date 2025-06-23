@@ -1,0 +1,70 @@
+#Pseudoclase dado
+dado<-function(caras,nombre){
+   d<-list("caras"=caras,"nom"=nombre)
+   class(d)<-"dado"
+   return(d)
+   }
+
+print.dado<-function(d){
+   cat(d$nom,"\n")
+   nc<-length(d$caras)
+   cat("╔",rep("═╦",nc-1),"═╗\n",sep="")
+   for(i in 1:nc) cat("║",d$caras[i],sep="")
+   cat("║\n")
+   cat("╚",rep("═╩",nc-1),"═╝\n",sep="")
+   }
+
+tirar<-function(d,n=1){
+   s<-sample(d$caras,size=n,replace=TRUE)
+   t<-sum(s)
+   r<-list("s"=s,"t"=t,"nom"=d$nom)
+   return(r)
+   }
+
+gana<-function(s1,s2){
+   res<-ifelse(s1$t<s2$t,s2$nom,
+	ifelse(s1$t>s2$t,s1$nom,"white"))
+   return(res)
+   }
+
+#--------------------t
+#Comienza simulación
+#--------------------
+dado1<-dado(c(1,1,5,5,9,9),"red")
+dado2<-dado(c(2,2,6,6,7,7),"blue")
+dado3<-dado(c(3,3,4,4,8,8),"green")
+
+res1vs2 <- numeric()
+res1vs3 <- numeric()
+res2vs3 <- numeric()
+
+for(i in 1:10000){
+	s1 <- tirar(dado1,2)
+	s2 <- tirar(dado2,2)
+	s3 <- tirar(dado3,2)
+	r1vs2 <- gana(s1, s2)
+	r1vs3 <- gana(s1, s3)
+	r2vs3 <- gana(s2, s3)
+	res1vs2<-c(res1vs2, r1vs2)
+	res1vs3<-c(res1vs3, r1vs3)
+	res2vs3<-c(res2vs3, r2vs3)
+}
+str(res1vs2)
+t1vs2 <- table(res1vs2)
+t1vs3 <- table(res1vs3)
+t2vs3 <- table(res2vs3)
+
+par(mfrow=c(1,3))
+
+barplot(t1vs2,xlab="Ganador",ylab="Frecuencia",
+    main="Resultado de dado 1 vs dado 2",
+    col=c("blue", "red", "white"))
+
+barplot(t1vs3,xlab="Ganador",ylab="Frecuencia",
+    main="Resultado de dado 3 vs dado 1",
+    col=c("green", "red", "white"))
+
+barplot(t2vs3,xlab="Ganador",ylab="Frecuencia",
+    main="Resultado de dado 2 vs dado 3",
+    col=c("blue", "green", "white"))
+

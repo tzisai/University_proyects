@@ -1,0 +1,11 @@
+P01: Ecualización de imágenes
+
+Objetivo:
+El objetivo de esta práctica es aprender a aplicar técnicas de ecualización de histogramas en imágenes para modificar el contraste, utilizando el software estadístico R.
+
+Planteamiento:
+1.1 Se explicará la relación entre la forma de los histogramas y el contraste de la imagen correspondiente.
+1.2 Se explicará qué es la ecualización de histogramas y cómo mejora el contraste en imágenes y cómo puede hacer que los detalles en imágenes con poco contraste sean más visibles.
+1.3 Se mostrará con ejemplos (desarrollo) el efecto de la ecualización endiferentes imágenes.
+2. Práctica independiente (experimentos): Cada estudiante deberá aplicar la ecualización de histogramas a tres imágenes propias. Deberán presentar las imágenes originales junto con las versiones ecualizadas, y proporcionar un breve análisis de las mejoras en el contraste observadas.
+

@@ -1,0 +1,26 @@
+// See https://aka.ms/new-console-template for more information
+
+/* 
+ Vectores en C#
+Generacion de nuemros random
+ */
+
+
+int i=0;
+string input0;
+int input = 0;
+Console.WriteLine("de que tamaño quiere el vector?");
+input0=Console.ReadLine();
+input = Convert.ToInt32(input0);
+
+int[] vector1 = new int[input];
+Random si = new Random();
+
+for (i = 0; i < input; i++){
+    vector1[i] = si.Next(1,100);
+}
+
+for(i = 0; i < vector1.Length; i++)
+{
+    Console.WriteLine(vector1[i]);
+}

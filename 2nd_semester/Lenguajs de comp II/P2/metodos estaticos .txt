@@ -1,0 +1,46 @@
+// See https://aka.ms/new-console-template for more information
+// Ejemplo_07_01a.cs
+// Métodos "static"
+// Martin Isai Nuñez Villeda
+
+using System;
+
+public class Hardware
+{
+    public static void BorrarPantalla()
+    {
+        for (byte i = 0; i < 25; i++)
+            Console.WriteLine();
+    }
+    public static void centrado_txt(string txt)
+    {
+        Console.SetCursorPosition(50, 4);
+        Console.WriteLine(txt);
+        Console.SetCursorPosition(50, 5);
+        Console.WriteLine("texto centrado");
+        Thread.Sleep(5000);
+    }
+}
+
+public class Ejemplo_07_01a
+{
+    public static void Main()
+    {
+        int borrar;
+        string input="a";
+        Console.WriteLine("Pulsa Intro para borrar");
+        Console.ReadLine();
+         Hardware.BorrarPantalla();
+        Console.Clear();
+        Console.WriteLine("Borrado!");
+        Thread.Sleep(3000);
+
+
+        Console.WriteLine("Ingrese el texto que deses centrar");
+       input= Console.ReadLine() ;
+        Hardware.centrado_txt(input);
+        
+
+    }
+}
+

@@ -1,0 +1,3 @@
+﻿  ArbolBinario.cpp
+C:\Users\Alan\source\repos\ArbolBinario\ArbolBinario\ArbolBinario.cpp(182,1): warning C4715: 'buscarNodo': no todas las rutas de acceso de control devuelven un valor
+  ArbolBinario.vcxproj -> C:\Users\Alan\source\repos\ArbolBinario\x64\Debug\ArbolBinario.exe

@@ -1,0 +1,60 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+public class trabajador
+{
+	string nombre;
+	public trabajador(){
+      
+        Console.WriteLine("hola soy un trabajador");
+    }
+
+}
+public class programador : trabajador
+{
+	public programador()
+	{
+        Console.WriteLine("hola soy un programador");
+    }
+}
+
+public class analista : trabajador
+{
+	public analista()
+	{
+		Console.WriteLine("hoal soy un analista");
+	}
+}
+
+
+
+
+	public class inge : trabajador
+	{
+		public inge()
+		{
+			Console.WriteLine("hola soy ingeniero");
+		}
+
+
+	}
+
+	public class Ingeinfo:inge
+	{
+		
+		public Ingeinfo()
+		{
+			
+			Console.WriteLine("Hola!!! soy ingeniero informático");
+		}
+	}
+
+// See https://aka.ms/new-console-template for more information
+using System;
+
+
+
+trabajador t1 = new trabajador();
+programador p1 = new programador(); 
+analista a1 = new analista();
+inge i1 = new inge();
+Ingeinfo if1 = new Ingeinfo();

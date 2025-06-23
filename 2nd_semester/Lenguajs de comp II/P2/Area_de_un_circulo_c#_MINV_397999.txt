@@ -1,0 +1,24 @@
+// See https://aka.ms/new-console-template for more information
+//Martin Isai Nuñez Villeda 
+//Objetivo: crea un programa en c# donde se obtenga el area de un circulo.
+
+string rad;
+double radio2 = 0;
+double area2= 0;
+double r = 2.50;
+double PI = Math.PI;
+double area = (PI * (r * r));
+
+rad=Console.ReadLine();
+radio2= Convert.ToDouble(rad);
+
+area2 = (PI * (radio2 * radio2));
+
+
+
+//calculo de el radio con el dato instacniado desde el principio.
+Console.WriteLine("El radio del circulo es de: "+r);
+Console.WriteLine("y su area es de " + area);
+//calculo de area con igreso de valores por el usuario.
+Console.WriteLine("El radio del circulo es de: " + radio2);
+Console.WriteLine("y su area es de " + area2);

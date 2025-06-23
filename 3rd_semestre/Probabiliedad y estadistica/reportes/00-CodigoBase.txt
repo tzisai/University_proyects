@@ -1,0 +1,9 @@
+library(jpeg)
+
+ruta<-file.choose()
+img <- readJPEG(ruta)
+
+R <- img[,,1]
+
+plot(0:1,0:1, type='n', axes = FALSE, xlab = "", ylab = "")
+rasterImage(R, 0, 0, 1, 1)

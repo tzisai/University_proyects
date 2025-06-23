@@ -1,0 +1,282 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicios_Repaso_MFMA_MINV
+{
+    public class menu //Imprime el menu
+    {
+        public int menuD()
+        {
+            string input;
+            int Ninput;
+
+            while (true)
+            {
+
+
+                try
+                {
+                    Console.BackgroundColor = ConsoleColor.White; //Pone la consola en color blanco
+                    Console.ForegroundColor = ConsoleColor.Black; //Asigna el color de las letras a negro
+                    Console.Clear();
+                    Console.SetCursorPosition(52, 0); //Indica donde imprimira en la consola
+                    Console.WriteLine("Bienvenido ");
+                    Console.SetCursorPosition(37, 2);
+                    Console.WriteLine("Selecciona el ejercicio que desea ejecutar");
+                    Console.SetCursorPosition(50, 4);
+                    Console.WriteLine("Ejercicio I  (1)");
+                    Console.SetCursorPosition(50, 6);
+                    Console.WriteLine("Ejercicio II (2)");
+                    Console.SetCursorPosition(50, 8);
+                    Console.WriteLine("Ejercicio III(3)");
+                    Console.SetCursorPosition(50, 10);
+                    Console.WriteLine("Ejercicio IV (4)");
+                    Console.SetCursorPosition(50, 12);
+                    Console.WriteLine("Ejercicio V  (5)");
+                    Console.SetCursorPosition(50, 14);
+                    Console.WriteLine("Ejercicio VI (6)");
+                    Console.SetCursorPosition(47, 18);
+                    Console.WriteLine("Salir de el programa(7)");
+                    Console.SetCursorPosition(58, 20);
+                    input = Console.ReadLine();
+                    Ninput = Convert.ToInt32(input);
+
+                    if (Ninput < 0 || Ninput > 7) //Verifica la opcion ingresada
+                    {
+                        Console.WriteLine("Numero no corresponde a las opciones disponibles");
+                        Thread.Sleep(1000);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Valor invalido porfavor ingresa un valor adecuado");
+                    Thread.Sleep(1000);
+                }
+            }
+
+            return Ninput;
+        }
+    }
+    public class Persona_mayor_menor //Opcion 1 
+    {
+        //Atributos 
+        private string? nombre;
+        int edad = 0;
+
+        //Metodos
+        public void Set_Persona(string nombre, int edad)
+        {
+            this.nombre = nombre;
+            this.edad = edad; //Usamos this ya que tiene las variables tienen el mismo nombre
+        }
+
+        public string Get_nombre()
+        {
+            return nombre; //Regresa el valor
+        }
+            public int Get_edad()
+        {
+            return edad; //Regresa el valor
+        }
+
+        public void mayor_menor() //Verificar si es mayor o menor de edad
+        {
+            if (edad < 18)
+            {
+                Console.WriteLine("Eres menor de edad");
+            }
+            else
+            {
+                Console.WriteLine("Eres mayor de edad");
+            }
+        }
+
+    }
+    public class cuadrado //Opcion 2
+    {
+        //Atributos
+        decimal lado;
+        public cuadrado(decimal lado)
+        {
+            this.lado = lado; //Usamos this ya que tiene el mimso nombre las variables
+        }
+        public void setLado(int lado_)
+        {
+            lado = lado_;
+        }
+
+        public void impresionRes(decimal res, string cosa) //Imprime los resultados
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("-----------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine();
+            Console.SetCursorPosition(4, 4);
+            Console.Write(cosa + res); 
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("-----------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Black;
+        }
+        public void perimetro(decimal lado) //Calcula el perimetro
+        {
+            decimal perimetro = 0.0m;
+            perimetro = (lado * 4);
+            impresionRes(perimetro, "El perimetro del cuadrado es de : ");
+        }
+
+        public void area(decimal lado) //Calcula el area
+        {
+            decimal area = 0.0m;
+            area = (lado * lado);
+            impresionRes(area, "El area//superficie del cuadrado es de : ");
+
+        }
+
+        public int validacion() //Valida el valor del lado
+        {
+            int lado = 0;
+            int validacion = 1;
+            while (validacion == 1)
+            {
+                try
+                {
+                    Console.WriteLine("Ingrese la longitud del lado del cuadrado:");
+
+                    lado = Convert.ToInt32(Console.ReadLine());
+                    if (lado > 1000000)
+                    {
+                        Console.WriteLine("Valor exede de la metricá solo ingrese valores menores de 100,000m(no numero negativos)");
+                        validacion = 1;
+                    }
+                    else
+                    {
+                        validacion = 0;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Input invalido intentelo nuevamente con NUMEROS ENTEROS Y NO NEGATIVOS");
+                    validacion = 1;
+                }
+            }
+            return lado;
+        }
+    }
+
+    public class trabajadores //Opcion 3
+    {
+        //Atributos
+        private string[] trabajadoreS;
+        private decimal[] sueldoS;
+        public trabajadores()
+        {
+
+            trabajadoreS = new string[5];
+            sueldoS = new decimal[5];
+
+            string pagaS;
+            string nom;
+            decimal paga;
+            pagaS = string.Empty; //Designamos el string como empty para evitar que marque error
+            nom = string.Empty;
+            paga = 0;
+
+            Console.WriteLine("Bienvenido C:");
+
+            for (int i = 0; i < 5; i++) //Pide los nombres y salarios de los trabajadores
+            {
+                Console.WriteLine("Ingrese el nombre del " + (i + 1) + " trabajador");
+                nom = Console.ReadLine();
+                Console.WriteLine("Ingrese el el salario del " + (i + 1) + " trabajador");
+                pagaS = Console.ReadLine();
+                paga = Convert.ToInt16(pagaS);
+                trabajadoreS[i] = nom;
+                sueldoS[i] = paga;
+
+            }
+
+
+
+
+        }
+
+        public void mothEmployed()
+        {
+            Console.Clear();
+            decimal sueldochido = sueldoS[0];
+            int posicionT = 0;
+
+            for (int j = 0; j < sueldoS.Length; j++) //Verifica cual es el salario maximo
+            {
+                if (sueldochido <= sueldoS[j])
+                {
+                    sueldochido = sueldoS[j];
+                    posicionT = j;
+                }
+            }
+
+            for (int i = 0; i < trabajadoreS.Length; i++) //Imprime los nombres y sueldos de los trabajadores
+            {
+                Console.WriteLine("El trabajador " + (i + 1) + " es " + trabajadoreS[i] + " y gana " + sueldoS[i] + " al mes");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("El trabajador con mayor sueldo es " + trabajadoreS[posicionT] + " y gana " + sueldochido + " al mes"); //Imrpime el nombre y sueldo del trabajador con mejor paga
+            Console.ReadKey();
+        }
+    }
+
+    public class Persona //Opcion 4 clase Padre
+    {
+        //Atributos
+        string nom;
+        int Edad;
+        public Persona(string nom, int Edad)
+        {
+            this.Edad = Edad; 
+            this.nom = nom; //Usamos this dado que tienen el mismo nombre como variable
+
+        }
+
+        public string getn()
+        {
+            return nom; //Regresa la variable
+        }
+
+        public int getedad()
+        {
+            return Edad; //Regresa la variable
+        }
+        public void imprimirDatos()
+        {
+            Console.WriteLine("Hola soy " + getn() + " y tengo " + getedad() + " años"); //Imprime las variables de la clase padre
+        }
+    }
+    public class empleado : Persona //Opcion 4 clase Hija
+    {
+        //Atributos
+        decimal salario;
+        public empleado(string nom, int Edad, decimal salario) : base(nom, Edad) //Constructor clase hija, se utiliza el 'base' para indicar que hereda de una clase padre
+        {
+            this.salario = salario; //This ya que se usa el mismo nombre de la variable
+        }
+
+        public decimal getsal()
+        {
+            return salario; //Regresa el valor de la variable
+        }
+        public void mostrarDatosEmpleado()
+        {
+            Console.WriteLine("Hola soy " + getn() + " soy un empleado,gano " + getsal() + " y tengo " + getedad() + " años"); //Imprime los datos de la clase hija
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+// See https://aka.ms/new-console-template for more information
+//Martin Isai Nuñez Villeda 
+//06 de marzo de 2024
+
+string peso1;
+double peso;
+Console.WriteLine("INGRESA EL PESAJA(EN KILOS): ");
+peso1 = Console.ReadLine();
+peso = Convert.ToInt32(peso1);
+
+if (peso > 500)
+{
+    Console.WriteLine("Pesa mas de media tonelada ");
+}
+else if(peso==500)
+{
+    Console.WriteLine("el peso es de media tonelada");    
+}
+else
+{
+    Console.WriteLine("El peso es menor de media tonelada");
+}
