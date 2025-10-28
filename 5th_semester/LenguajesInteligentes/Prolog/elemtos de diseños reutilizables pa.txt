@@ -1,0 +1,17 @@
+elemtos de diseños reutilizables para resolver problemas repetitivos
+<diempre que se da una situaicon se comoda de tal modo que se presenta como un par el problema y la solucion>
+Definición técnica:
+	Conjunto de principios que le da forma a una aplicación, también define un framework abstracto para una familia de sistemas 
+
+	Insumos de los Productos de Arquitecturas
+
+no siempre esan definidso es necesarioas reconocerlos y clasificarlos
+
+	*conjunto o categoría de componentes basados en su funcionalidad
+	*Conjunto de conectores para definir las interacciones 
+	*restricciones semánticas como los componentes pueden ser integrados 
+	*Layout (disposición de elementos) topologico que indica las 	interrelaciones en tiempo de ejecicion (RUN TIME)
+	
+	*proveer un glosario de cp,ponentes o conectores con sus reglas de 	combinación 
+	*mejora la modularidad y permite el reuso  de diseños para dar 	soluciones 	a problemas repetitivos
+	*describe un modo particular de configurar un colección de componentes 	(modulos con intefaces reusables y remplazables) y conectores(la c	omunicación entre modulos)
